@@ -2,6 +2,7 @@
     import { colors } from "$lib/utils";
     import type { ChartData } from "chart.js";
     import { Bar, Chart } from "svelte-chartjs";
+    import ChartDataLabels from "chartjs-plugin-datalabels";
 
     let { result }: { result: PlayerStat[] } = $props();
 
@@ -14,6 +15,13 @@
                 backgroundColor: colors[0],
                 type: "bar",
                 order: 1,
+                datalabels: {
+                    anchor: "center",
+                    align: "top",
+                    color: "#fff",
+                    offset: 0,
+                    formatter: (value) => `${value}h`,
+                },
             },
             {
                 label: "Anos jogando",
@@ -27,6 +35,13 @@
                 yAxisID: "y1",
                 fill: false,
                 order: 0,
+                datalabels: {
+                    anchor: "start",
+                    align: "top",
+                    color: "#000",
+                    offset: 0,
+                    formatter: (value) => `${value} anos`,
+                },
             },
         ],
     });
@@ -61,5 +76,6 @@
                 },
             },
         }}
+        plugins={[ChartDataLabels]}
     />
 </div>
