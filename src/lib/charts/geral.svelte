@@ -1,5 +1,6 @@
 <script lang="ts">
-    import { colors } from "$lib/colors";
+    import { colors, dataLabelsPlugins } from "$lib/utils";
+    import ChartDataLabels from "chartjs-plugin-datalabels";
     import type { ChartData } from "chart.js";
     import { Bar } from "svelte-chartjs";
 
@@ -36,5 +37,12 @@
 
 <div>
     <h3 class="title">Partidas, Vitórias, Derrotas e MVPs por Nome</h3>
-    <Bar data={chartData} options={{ responsive: true }} />
+    <Bar
+        data={chartData}
+        options={{
+            responsive: true,
+            ...dataLabelsPlugins,
+        }}
+        plugins={[ChartDataLabels]}
+    />
 </div>

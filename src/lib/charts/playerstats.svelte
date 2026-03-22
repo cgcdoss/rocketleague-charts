@@ -1,7 +1,8 @@
 <script lang="ts">
-    import { colors } from "$lib/colors";
+    import { colors, dataLabelsPlugins } from "$lib/utils";
     import type { ChartData } from "chart.js";
-    import { Bar, Pie } from "svelte-chartjs";
+    import { Pie } from "svelte-chartjs";
+    import ChartDataLabels from "chartjs-plugin-datalabels";
 
     let { result, player }: { result: PlayerStat[]; player: string } = $props();
 
@@ -30,5 +31,17 @@
 
 <div>
     <h3 class="title">{player}</h3>
-    <Pie data={chartData} options={{ responsive: true }} />
+    <Pie
+        data={chartData}
+        options={{
+            responsive: true,
+            plugins: {
+                datalabels: {
+                    ...dataLabelsPlugins.plugins.datalabels,
+                    rotation: 0,
+                },
+            },
+        }}
+        plugins={[ChartDataLabels]}
+    />
 </div>

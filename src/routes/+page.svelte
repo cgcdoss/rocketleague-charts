@@ -1,26 +1,16 @@
 <script lang="ts">
     import Geral from "$lib/charts/geral.svelte";
     import GolsAssistenciasDefesas from "$lib/charts/gols-assistencias-defesas.svelte";
-    import {
-        ArcElement,
-        BarElement,
-        CategoryScale,
-        Chart as ChartJS,
-        Legend,
-        LineController,
-        LineElement,
-        LinearScale,
-        PointElement,
-        RadialLinearScale,
-        Title,
-        Tooltip,
-        registerables,
-    } from "chart.js";
-    import type { PageProps } from "./$types";
-    import Playerstats from "$lib/charts/playerstats.svelte";
     import Medias from "$lib/charts/medias.svelte";
-    import Tempojogo from "$lib/charts/tempojogo.svelte";
+    import Playerstats from "$lib/charts/playerstats.svelte";
     import Radar from "$lib/charts/radar.svelte";
+    import Tempojogo from "$lib/charts/tempojogo.svelte";
+    import {
+        Chart as ChartJS,
+        registerables
+    } from "chart.js";
+    import ChartDataLabels from 'chartjs-plugin-datalabels';
+    import type { PageProps } from "./$types";
 
     ChartJS.register(...registerables);
 

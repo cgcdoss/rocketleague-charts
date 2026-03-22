@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { colors } from "$lib/colors";
+    import { colors } from "$lib/utils";
     import type { ChartData } from "chart.js";
     import { Radar } from "svelte-chartjs";
 
