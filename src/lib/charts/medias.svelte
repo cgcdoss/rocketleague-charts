@@ -44,7 +44,7 @@
 </script>
 
 <div>
-    <h3 class="title">Médias</h3>
+    <h3 class="title">Médias por partida</h3>
     <Bar
         data={chartData}
         options={{ responsive: true, ...dataLabelsPlugins }}
