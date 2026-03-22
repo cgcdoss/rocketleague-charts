@@ -1,1 +1,5 @@
 @import 'tailwindcss';
+
+.title {
+    @apply text-xl font-bold mb-4;
+}

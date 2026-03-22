@@ -17,4 +17,5 @@ type PlayerStat = {
   'Gols de Ré': number;
   'Gols de Bicicleta': number;
   'Gols à Distância': number;
+  'Início do jogo': Date;
 };

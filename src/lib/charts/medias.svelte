@@ -9,32 +9,31 @@
         labels: result.map((d) => d.Nome),
         datasets: [
             {
-                label: "Partidas",
-                data: result.map((d) => d["Total de Partidas Jogadas"]),
+                label: "Gols",
+                data: result.map(
+                    (d) => d["Gols (Total)"] / d["Total de Partidas Jogadas"],
+                ),
                 backgroundColor: colors[0],
             },
             {
-                label: "Vitórias",
-                data: result.map((d) => d.Vitórias),
+                label: "Assistências",
+                data: result.map(
+                    (d) => d["Assistências"] / d["Total de Partidas Jogadas"],
+                ),
                 backgroundColor: colors[1],
             },
             {
-                label: "Derrotas",
+                label: "Defesas",
                 data: result.map(
-                    (d) => d["Total de Partidas Jogadas"] - d.Vitórias,
+                    (d) => d["Defesas"] / d["Total de Partidas Jogadas"],
                 ),
                 backgroundColor: colors[2],
-            },
-            {
-                label: "MVPs",
-                data: result.map((d) => d.MVPs),
-                backgroundColor: colors[3],
             },
         ],
     });
 </script>
 
 <div>
-    <h3 class="title">Partidas, Vitórias, Derrotas e MVPs por Nome</h3>
+    <h3 class="title">Médias</h3>
     <Bar data={chartData} options={{ responsive: true }} />
 </div>

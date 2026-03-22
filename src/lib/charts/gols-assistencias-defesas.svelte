@@ -27,6 +27,7 @@
     });
 </script>
 
-<div class="w-full">
+<div>
+    <h3 class="title">Gols, Assistências e Defesas por Nome</h3>
     <Bar data={chartData} options={{ responsive: true }} />
 </div>

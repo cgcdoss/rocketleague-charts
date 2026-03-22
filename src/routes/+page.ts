@@ -22,6 +22,7 @@ export const load = (async () => {
                 'Gols de Ré': 99,
                 'Gols de Bicicleta': 43,
                 'Gols à Distância': 1046,
+                "Início do jogo": new Date("2016-01-01"),
             },
             {
                 Nome: 'Michel',
@@ -42,6 +43,7 @@ export const load = (async () => {
                 'Gols de Ré': 59,
                 'Gols de Bicicleta': 14,
                 'Gols à Distância': 364,
+                "Início do jogo": new Date("2024-07-01"),
             },
             {
                 Nome: 'Dudu',
@@ -62,6 +64,7 @@ export const load = (async () => {
                 'Gols de Ré': 49,
                 'Gols de Bicicleta': 18,
                 'Gols à Distância': 417,
+                "Início do jogo": new Date("2020-01-01"),
             },
             {
                 Nome: 'Leandro',
@@ -82,6 +85,7 @@ export const load = (async () => {
                 'Gols de Ré': 27,
                 'Gols de Bicicleta': 11,
                 'Gols à Distância': 329,
+                "Início do jogo": new Date("2021-01-01"),
 
             },
         ] as Array<PlayerStat>,
