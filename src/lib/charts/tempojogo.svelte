@@ -24,6 +24,7 @@
                 ),
                 backgroundColor: colors[1],
                 type: "line",
+                yAxisID: "y1",
                 fill: false,
                 order: 0,
             },
@@ -38,6 +39,27 @@
         data={chartData}
         options={{
             responsive: true,
+            scales: {
+                y: {
+                    type: "linear",
+                    position: "left",
+                    title: {
+                        display: true,
+                        text: "Tempo de jogo (em h)",
+                    },
+                },
+                y1: {
+                    type: "linear",
+                    position: "right",
+                    title: {
+                        display: true,
+                        text: "Anos jogando",
+                    },
+                    grid: {
+                        drawOnChartArea: false, // evita sobreposição de grids
+                    },
+                },
+            },
         }}
     />
 </div>
