@@ -1,0 +1,20 @@
+type PlayerStat = {
+  Nome: string;
+  'Total de Partidas Jogadas': number;
+  'Vitória %': number;
+  'Gols (Total)': number;
+  Assistências: number;
+  Defesas: number;
+  'Média de Gols por Partida': number;
+  'Média de Assistências por Partida': number;
+  'Média de Defesas por Partida': number;
+  'Nível de XP': number;
+  'XP geral': number;
+  'Tempo de Jogo (em horas)': number;
+  Vitórias: number;
+  MVPs: number;
+  'Gols Aéreos': number;
+  'Gols de Ré': number;
+  'Gols de Bicicleta': number;
+  'Gols à Distância': number;
+};
