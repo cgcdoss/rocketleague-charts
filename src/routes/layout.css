@@ -1,5 +1,9 @@
 @import 'tailwindcss';
 
+body {
+    @apply mx-2;
+}
+
 .title {
     @apply text-xl font-bold mb-4;
 }
