@@ -1,7 +1,6 @@
 <script lang="ts">
     import { colors, dataLabelsPlugins } from "$lib/utils";
     import type { ChartData } from "chart.js";
-    import ChartDataLabels from "chartjs-plugin-datalabels";
     import { Bar } from "svelte-chartjs";
 
     let { result }: { result: PlayerStat[] } = $props();
@@ -33,6 +32,5 @@
     <Bar
         data={chartData}
         options={{ responsive: true, ...dataLabelsPlugins }}
-        plugins={[ChartDataLabels]}
     />
 </div>

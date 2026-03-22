@@ -35,6 +35,11 @@
                     borderWidth: 3,
                 },
             },
+            plugins: {
+                datalabels: {
+                    display: false,
+                },
+            },
         }}
     />
 </div>

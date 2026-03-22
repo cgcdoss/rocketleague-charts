@@ -5,14 +5,11 @@
     import Playerstats from "$lib/charts/playerstats.svelte";
     import Radar from "$lib/charts/radar.svelte";
     import Tempojogo from "$lib/charts/tempojogo.svelte";
-    import {
-        Chart as ChartJS,
-        registerables
-    } from "chart.js";
-    import ChartDataLabels from 'chartjs-plugin-datalabels';
+    import { Chart as ChartJS, registerables } from "chart.js";
+    import ChartDataLabels from "chartjs-plugin-datalabels";
     import type { PageProps } from "./$types";
 
-    ChartJS.register(...registerables);
+    ChartJS.register(...registerables, ChartDataLabels);
 
     let { data }: PageProps = $props();
 </script>

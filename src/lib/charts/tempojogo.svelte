@@ -1,8 +1,7 @@
 <script lang="ts">
     import { colors } from "$lib/utils";
     import type { ChartData } from "chart.js";
-    import { Bar, Chart } from "svelte-chartjs";
-    import ChartDataLabels from "chartjs-plugin-datalabels";
+    import { Chart } from "svelte-chartjs";
 
     let { result }: { result: PlayerStat[] } = $props();
 
@@ -31,6 +30,7 @@
                         d["Início do jogo"].getFullYear(),
                 ),
                 backgroundColor: colors[1],
+                borderColor: colors[1] + "80",
                 type: "line",
                 yAxisID: "y1",
                 fill: false,
@@ -76,6 +76,5 @@
                 },
             },
         }}
-        plugins={[ChartDataLabels]}
     />
 </div>

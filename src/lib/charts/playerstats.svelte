@@ -2,7 +2,6 @@
     import { colors, dataLabelsPlugins } from "$lib/utils";
     import type { ChartData } from "chart.js";
     import { Pie } from "svelte-chartjs";
-    import ChartDataLabels from "chartjs-plugin-datalabels";
 
     let { result, player }: { result: PlayerStat[]; player: string } = $props();
 
@@ -42,6 +41,5 @@
                 },
             },
         }}
-        plugins={[ChartDataLabels]}
     />
 </div>

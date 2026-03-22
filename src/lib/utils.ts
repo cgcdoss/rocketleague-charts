@@ -13,9 +13,6 @@ export let dataLabelsPlugins: { plugins: { datalabels: Options } } = {
         weight: "bold",
         size: 10,
       },
-      formatter: function (value: any) {
-        return value;
-      },
     },
   }
 };

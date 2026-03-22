@@ -1,6 +1,5 @@
 <script lang="ts">
     import { colors, dataLabelsPlugins } from "$lib/utils";
-    import ChartDataLabels from "chartjs-plugin-datalabels";
     import type { ChartData } from "chart.js";
     import { Bar } from "svelte-chartjs";
 
@@ -43,6 +42,5 @@
             responsive: true,
             ...dataLabelsPlugins,
         }}
-        plugins={[ChartDataLabels]}
     />
 </div>
