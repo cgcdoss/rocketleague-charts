@@ -40,7 +40,7 @@
                     rotation: 0,
                     font: {
                         size: 11,
-                        weight: "normal",
+                        weight: "bold",
                     },
                 },
             },
