@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { colors } from "$lib/utils";
+    import { colors, differenceInYears } from "$lib/utils";
     import type { ChartData } from "chart.js";
     import { Chart } from "svelte-chartjs";
 
@@ -26,8 +26,10 @@
                 label: "Anos jogando",
                 data: result.map(
                     (d) =>
-                        new Date().getFullYear() -
-                        d["Início do jogo"].getFullYear(),
+                        +differenceInYears(
+                            new Date(),
+                            d["Início do jogo"],
+                        ).toFixed(1),
                 ),
                 backgroundColor: colors[1],
                 borderColor: colors[1] + "80",
@@ -40,7 +42,8 @@
                     align: "top",
                     color: "#000",
                     offset: 0,
-                    formatter: (value) => `${value} anos`,
+                    formatter: (value) =>
+                        `${value.toString().replace(".", ",")} anos`,
                 },
             },
         ],

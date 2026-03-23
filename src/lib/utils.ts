@@ -16,3 +16,8 @@ export let dataLabelsPlugins: { plugins: { datalabels: Options } } = {
     },
   }
 };
+
+export function differenceInYears(date1: Date, date2: Date): number {
+  const diffInMs = Math.abs(date2.getTime() - date1.getTime());
+  return parseFloat((diffInMs / (1000 * 60 * 60 * 24 * 365)).toFixed(1));
+}
