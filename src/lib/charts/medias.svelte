@@ -46,6 +46,13 @@
     <h3 class="title">Médias por partida</h3>
     <Bar
         data={chartData}
-        options={{ responsive: true, ...dataLabelsPlugins }}
+        options={{
+            responsive: true,
+            plugins: {
+                datalabels: {
+                    ...dataLabelsPlugins.plugins.datalabels,
+                },
+            },
+        }}
     />
 </div>

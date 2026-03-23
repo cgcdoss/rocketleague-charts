@@ -38,6 +38,10 @@
                 datalabels: {
                     ...dataLabelsPlugins.plugins.datalabels,
                     rotation: 0,
+                    font: {
+                        size: 11,
+                        weight: "normal",
+                    },
                 },
             },
         }}
