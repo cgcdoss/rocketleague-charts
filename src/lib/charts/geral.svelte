@@ -1,4 +1,5 @@
 <script lang="ts">
+    import Card from "$lib/components/card.svelte";
     import { colors, dataLabelsPlugins } from "$lib/utils";
     import type { ChartData } from "chart.js";
     import { Bar } from "svelte-chartjs";
@@ -11,36 +12,42 @@
             {
                 label: "Partidas",
                 data: result.map((d) => d["Total de Partidas Jogadas"]),
-                backgroundColor: colors[0],
+                backgroundColor: colors[1],
             },
             {
                 label: "Vitórias",
                 data: result.map((d) => d.Vitórias),
-                backgroundColor: colors[1],
+                backgroundColor: "#006700",
             },
             {
                 label: "Derrotas",
                 data: result.map(
                     (d) => d["Total de Partidas Jogadas"] - d.Vitórias,
                 ),
-                backgroundColor: colors[2],
-            },
-            {
-                label: "MVPs",
-                data: result.map((d) => d.MVPs),
-                backgroundColor: colors[3],
+                backgroundColor: "#b30000",
             },
         ],
     });
 </script>
 
-<div>
-    <h3 class="title">Partidas, Vitórias, Derrotas e MVPs por Nome</h3>
-    <Bar
-        data={chartData}
-        options={{
-            responsive: true,
-            ...dataLabelsPlugins,
-        }}
-    />
-</div>
+<Card>
+    <h3 class="title">Partidas, Vitórias e Derrotas por Jogador</h3>
+    <div class="h-60">
+        <Bar
+            data={chartData}
+            options={{
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    datalabels: {
+                        ...dataLabelsPlugins.plugins.datalabels,
+                        font: {
+                            weight: "bold",
+                            size: 14,
+                        },
+                    },
+                },
+            }}
+        />
+    </div>
+</Card>

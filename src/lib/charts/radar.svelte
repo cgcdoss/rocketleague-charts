@@ -1,4 +1,5 @@
 <script lang="ts">
+    import Card from "$lib/components/card.svelte";
     import { colors } from "$lib/utils";
     import type { ChartData } from "chart.js";
     import { Radar } from "svelte-chartjs";
@@ -20,26 +21,31 @@
     });
 </script>
 
-<div>
-    <Radar
-        data={chartData}
-        options={{
-            responsive: true,
-            scales: {
-                r: {
-                    beginAtZero: true,
+<Card classname="flex flex-col h-90 md:h-full">
+    <h3 class="title">Estatísticas por Jogador</h3>
+
+    <div class="flex-1 min-h-0">
+        <Radar
+            data={chartData}
+            options={{
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        beginAtZero: true,
+                    },
                 },
-            },
-            elements: {
-                line: {
-                    borderWidth: 3,
+                elements: {
+                    line: {
+                        borderWidth: 3,
+                    },
                 },
-            },
-            plugins: {
-                datalabels: {
-                    display: false,
+                plugins: {
+                    datalabels: {
+                        display: false,
+                    },
                 },
-            },
-        }}
-    />
-</div>
+            }}
+        />
+    </div>
+</Card>

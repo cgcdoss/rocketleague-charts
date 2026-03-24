@@ -1,4 +1,5 @@
 <script lang="ts">
+    import Card from "$lib/components/card.svelte";
     import { colors, dataLabelsPlugins } from "$lib/utils";
     import type { ChartData } from "chart.js";
     import { Bar } from "svelte-chartjs";
@@ -42,17 +43,24 @@
     });
 </script>
 
-<div>
+<Card>
     <h3 class="title">Médias por partida</h3>
-    <Bar
-        data={chartData}
-        options={{
-            responsive: true,
-            plugins: {
-                datalabels: {
-                    ...dataLabelsPlugins.plugins.datalabels,
+    <div class="h-60">
+        <Bar
+            data={chartData}
+            options={{
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    datalabels: {
+                        ...dataLabelsPlugins.plugins.datalabels,
+                        font: {
+                            weight: "bold",
+                            size: 14,
+                        },
+                    },
                 },
-            },
-        }}
-    />
-</div>
+            }}
+        />
+    </div>
+</Card>

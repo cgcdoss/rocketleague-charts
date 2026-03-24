@@ -1,4 +1,5 @@
 <script lang="ts">
+    import Card from "$lib/components/card.svelte";
     import { colors, differenceInYears } from "$lib/utils";
     import type { ChartData } from "chart.js";
     import { Chart } from "svelte-chartjs";
@@ -20,6 +21,10 @@
                     color: "#fff",
                     offset: 0,
                     formatter: (value) => `${value}h`,
+                    font: {
+                        weight: "bold",
+                        size: 12,
+                    },
                 },
             },
             {
@@ -44,40 +49,48 @@
                     offset: 0,
                     formatter: (value) =>
                         `${value.toString().replace(".", ",")} anos`,
+                    font: {
+                        weight: "bold",
+                        size: 12,
+                    },
                 },
             },
         ],
     });
 </script>
 
-<div>
-    <h3 class="title">Tempo de Jogo e Anos Jogando por Nome</h3>
-    <Chart
-        type="bar"
-        data={chartData}
-        options={{
-            responsive: true,
-            scales: {
-                y: {
-                    type: "linear",
-                    position: "left",
-                    title: {
-                        display: true,
-                        text: "Tempo de jogo (em h)",
+<Card classname="flex flex-col h-90 md:h-full">
+    <h3 class="title">Tempo de Jogo e Anos Jogando por Jogador</h3>
+
+    <div class="flex-1 min-h-0">
+        <Chart
+            type="bar"
+            data={chartData}
+            options={{
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        type: "linear",
+                        position: "left",
+                        title: {
+                            display: true,
+                            text: "Tempo de jogo (em h)",
+                        },
+                    },
+                    y1: {
+                        type: "linear",
+                        position: "right",
+                        title: {
+                            display: true,
+                            text: "Anos jogando",
+                        },
+                        grid: {
+                            drawOnChartArea: false, // evita sobreposição de grids
+                        },
                     },
                 },
-                y1: {
-                    type: "linear",
-                    position: "right",
-                    title: {
-                        display: true,
-                        text: "Anos jogando",
-                    },
-                    grid: {
-                        drawOnChartArea: false, // evita sobreposição de grids
-                    },
-                },
-            },
-        }}
-    />
-</div>
+            }}
+        />
+    </div>
+</Card>

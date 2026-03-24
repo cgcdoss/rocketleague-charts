@@ -10,26 +10,16 @@
         labels: result.map((d) => d.Nome),
         datasets: [
             {
-                label: "Gols",
-                data: result.map((d) => d["Gols (Total)"]),
+                label: "MVPs",
+                data: result.map((d) => d.MVPs),
                 backgroundColor: colors[0],
-            },
-            {
-                label: "Assistências",
-                data: result.map((d) => d["Assistências"]),
-                backgroundColor: colors[1],
-            },
-            {
-                label: "Defesas",
-                data: result.map((d) => d["Defesas"]),
-                backgroundColor: colors[2],
             },
         ],
     });
 </script>
 
 <Card>
-    <h3 class="title">Gols, Assistências e Defesas por Jogador</h3>
+    <h3 class="title">MVPs por Jogador</h3>
     <div class="h-60">
         <Bar
             data={chartData}
@@ -39,6 +29,7 @@
                 plugins: {
                     datalabels: {
                         ...dataLabelsPlugins.plugins.datalabels,
+                        rotation: 0,
                         font: {
                             weight: "bold",
                             size: 14,
