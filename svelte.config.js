@@ -3,10 +3,15 @@ import adapter from '@sveltejs/adapter-static';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({
+			pages: 'build',
+			assets: 'build',
+			fallback: '404.html', // This is crucial for SPA routing on GitHub Pages
+			precompress: false,
+			strict: true,
+		}),
 		paths: {
-			// base: process.env.NODE_ENV === 'production' ? '/svelte-teste' : '' // Para funcionar no Github Pages
-			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH // Para funcionar no Github Pages
+			base: process.env.NODE_ENV === 'production' ? '/rocketleague-charts' : '' // Para funcionar no Github Pages
 		},
 		appDir: 'app',
 	},

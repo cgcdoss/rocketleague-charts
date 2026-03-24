@@ -1,6 +1,6 @@
 <script lang="ts">
     import Card from "$lib/components/card.svelte";
-    import { colors, dataLabelsPlugins } from "$lib/utils";
+    import { colors, dataLabelsPlugins } from "$lib/utils/utils";
     import type { ChartData } from "chart.js";
     import { Pie } from "svelte-chartjs";
 

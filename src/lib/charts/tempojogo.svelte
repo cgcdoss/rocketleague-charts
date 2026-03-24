@@ -1,6 +1,6 @@
 <script lang="ts">
     import Card from "$lib/components/card.svelte";
-    import { colors, differenceInYears } from "$lib/utils";
+    import { colors, differenceInYears } from "$lib/utils/utils";
     import type { ChartData } from "chart.js";
     import { Chart } from "svelte-chartjs";
 
