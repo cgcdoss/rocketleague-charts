@@ -38,6 +38,7 @@
                 ),
                 backgroundColor: colors[1],
                 borderColor: colors[1] + "80",
+                pointBorderWidth: 4,
                 type: "line",
                 yAxisID: "y1",
                 fill: false,
