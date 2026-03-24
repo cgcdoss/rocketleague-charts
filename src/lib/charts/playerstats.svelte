@@ -5,6 +5,15 @@
     import { Pie } from "svelte-chartjs";
 
     let { result, player }: { result: PlayerStat[]; player: string } = $props();
+    let gols = $derived(
+        result.find((d) => d.Nome === player)?.["Gols (Total)"] || 0,
+    );
+    let assistencias = $derived(
+        result.find((d) => d.Nome === player)?.["Assistências"] || 0,
+    );
+    let defesas = $derived(
+        result.find((d) => d.Nome === player)?.["Defesas"] || 0,
+    );
 
     let chartData = $derived<ChartData<"pie", number[], string>>({
         labels: ["Gols", "Assistências", "Defesas"],
@@ -12,16 +21,7 @@
             {
                 label: "",
                 data: result.find((d) => d.Nome === player)
-                    ? [
-                          result.find((d) => d.Nome === player)?.[
-                              "Gols (Total)"
-                          ] || 0,
-                          result.find((d) => d.Nome === player)?.[
-                              "Assistências"
-                          ] || 0,
-                          result.find((d) => d.Nome === player)?.["Defesas"] ||
-                              0,
-                      ]
+                    ? [gols, assistencias, defesas]
                     : [0, 0, 0],
                 backgroundColor: colors,
             },
@@ -42,9 +42,15 @@
                         ...dataLabelsPlugins.plugins.datalabels,
                         rotation: 0,
                         font: {
-                            size: 12,
+                            size: 11,
                             weight: "bold",
                         },
+
+                        offset: 10,
+                        formatter: (value) =>
+                            value > 0
+                                ? `${value} \n${((value / (gols + assistencias + defesas)) * 100).toFixed(1)}%`
+                                : "",
                     },
                 },
             }}
