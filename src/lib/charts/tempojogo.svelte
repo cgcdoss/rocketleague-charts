@@ -45,7 +45,7 @@
                 datalabels: {
                     anchor: "start",
                     align: "top",
-                    color: "#000",
+                    color: colors[1],
                     offset: 0,
                     formatter: (value) =>
                         `${value.toString().replace(".", ",")} anos`,
