@@ -1,1 +1,1 @@
-export const env={}
+export const env={"PUBLIC_URL_PLANILHA":"https://docs.google.com/spreadsheets/d/1QzjAUms3K_2RWJ4q9yZXN73gwU3dHJaf5jst_wUIn8U/gviz/tq?tqx=out:json&gid=0"}
