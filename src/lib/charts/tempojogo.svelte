@@ -61,7 +61,7 @@
 </script>
 
 <Card classname="flex flex-col h-90 md:h-full">
-    <h3 class="title">Tempo de Jogo e Anos Jogando por Jogador</h3>
+    <h3 class="title">Tempo de Jogo x Anos Jogando por Jogador</h3>
 
     <div class="flex-1 min-h-0">
         <Chart
