@@ -5,9 +5,9 @@
     let data: { result: PlayerStat[] } = $props();
 </script>
 
-<Card classname="flex-1 flex flex-col min-h-0">
+<Card>
     <h3 class="title">Estilo de jogo</h3>
-    <div class="flex-1 min-h-0 grid grid-cols-2">
+    <div class="grid grid-cols-2 lg:flex justify-between gap-3">
         {#each data.result as result}
             <Playerstats result={data.result} player={result.Nome} />
         {/each}

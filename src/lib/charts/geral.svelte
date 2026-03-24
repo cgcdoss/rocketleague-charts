@@ -30,9 +30,9 @@
     });
 </script>
 
-<Card classname="flex-1 flex flex-col min-h-0 max-sm:min-h-86">
+<Card>
     <h3 class="title">Partidas, Vitórias e Derrotas por Jogador</h3>
-    <div class="flex-1 min-h-0">
+    <div class="h-66">
         <Bar
             data={chartData}
             options={{

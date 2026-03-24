@@ -23,11 +23,11 @@
 </div>
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-    <div class="flex flex-col gap-3">
-        <Geral result={data.result} />
-        <GolsAssistenciasDefesas result={data.result} />
+    <Geral result={data.result} />
+    <GolsAssistenciasDefesas result={data.result} />
+    <div class="md:col-span-2">
+        <Estilojogo result={data.result} />
     </div>
-    <Estilojogo result={data.result} />
     <Mvps result={data.result} />
     <Medias result={data.result} />
     <Tempojogo result={data.result} />

@@ -29,9 +29,9 @@
     });
 </script>
 
-<div class="item">
+<div>
     <h4 class="font-bold">{player}</h4>
-    <div class="h-66">
+    <div class="h-60 w-60 max-lg:w-auto">
         <Pie
             data={chartData}
             options={{
@@ -55,35 +55,3 @@
         />
     </div>
 </div>
-
-<style>
-    @reference "../../routes/layout.css";
-    .item {
-        @apply border-b border-gray-300;
-
-        &:nth-child(1) {
-            @apply pr-2 pb-2;
-        }
-
-        &:nth-child(2) {
-            @apply pl-2 pb-2;
-        }
-
-        &:nth-child(3) {
-            @apply pt-2 pr-2;
-        }
-
-        &:nth-child(4) {
-            @apply pt-2 pl-2;
-        }
-    }
-
-    .item:last-child,
-    .item:nth-last-child(2):nth-child(odd) {
-        @apply border-b-0;
-    }
-
-    .item:nth-child(odd) {
-        @apply border-r border-gray-300;
-    }
-</style>
