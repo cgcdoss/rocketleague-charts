@@ -2,10 +2,12 @@
     import Estilojogo from "$lib/charts/estilojogo.svelte";
     import Geral from "$lib/charts/geral.svelte";
     import GolsAssistenciasDefesas from "$lib/charts/gols-assistencias-defesas.svelte";
+    import GolsDiferentes from "$lib/charts/gols-diferentes.svelte";
     import Medias from "$lib/charts/medias.svelte";
     import Mvps from "$lib/charts/mvps.svelte";
     import Radar from "$lib/charts/radar.svelte";
     import Tempojogo from "$lib/charts/tempojogo.svelte";
+    import Xp from "$lib/charts/xp.svelte";
     import Dashboard from "$lib/components/dashboard.svelte";
     import { Chart as ChartJS, registerables } from "chart.js";
     import ChartDataLabels from "chartjs-plugin-datalabels";
@@ -30,4 +32,6 @@
     <Medias result={data.result} />
     <Tempojogo result={data.result} />
     <Radar result={data.result} />
+    <Xp result={data.result} />
+    <GolsDiferentes result={data.result} />
 </div>

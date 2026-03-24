@@ -9,7 +9,6 @@ type PlayerStat = {
   'Média de Assistências por Partida': number;
   'Média de Defesas por Partida': number;
   'Nível de XP': number;
-  'XP geral': number;
   'Tempo de Jogo (em horas)': number;
   Vitórias: number;
   MVPs: number;

@@ -12,6 +12,7 @@ export const load = (async ({ fetch }) => {
   try {
     result = await carregar(fetch);
   } catch (error) {
+    console.log("Erro ao carregar dados da planilha, usando backup:", error);
     result = resultBackup;
   }
   return { result };
