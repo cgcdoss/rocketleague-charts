@@ -10,6 +10,11 @@
         labels: result.map((d) => d.Nome),
         datasets: [
             {
+                label: "Gols à Distância",
+                data: result.map((d) => d["Gols à Distância"]),
+                backgroundColor: colors[3],
+            },
+            {
                 label: "Gols Aéreos",
                 data: result.map((d) => d["Gols Aéreos"]),
                 backgroundColor: colors[0],
@@ -23,11 +28,6 @@
                 label: "Gols de Bicicleta",
                 data: result.map((d) => d["Gols de Bicicleta"]),
                 backgroundColor: colors[2],
-            },
-            {
-                label: "Gols à Distância",
-                data: result.map((d) => d["Gols à Distância"]),
-                backgroundColor: colors[3],
             },
         ],
     });
