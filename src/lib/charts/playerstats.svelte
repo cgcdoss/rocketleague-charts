@@ -29,9 +29,9 @@
     });
 </script>
 
-<div class="flex flex-col min-h-0 item">
+<div class="item">
     <h4 class="font-bold">{player}</h4>
-    <div class="flex-1 min-h-0">
+    <div class="h-66">
         <Pie
             data={chartData}
             options={{
@@ -42,14 +42,12 @@
                         ...dataLabelsPlugins.plugins.datalabels,
                         rotation: 0,
                         font: {
-                            size: 11,
+                            size: 12,
                             weight: "bold",
                         },
-
-                        offset: 10,
                         formatter: (value) =>
                             value > 0
-                                ? `${value} \n${((value / (gols + assistencias + defesas)) * 100).toFixed(1)}%`
+                                ? `${value} \n${((value / (gols + assistencias + defesas)) * 100).toFixed(0)}%`
                                 : "",
                     },
                 },
@@ -61,7 +59,23 @@
 <style>
     @reference "../../routes/layout.css";
     .item {
-        @apply p-2 border-b border-gray-300;
+        @apply border-b border-gray-300;
+
+        &:nth-child(1) {
+            @apply pr-2 pb-2;
+        }
+
+        &:nth-child(2) {
+            @apply pl-2 pb-2;
+        }
+
+        &:nth-child(3) {
+            @apply pt-2 pr-2;
+        }
+
+        &:nth-child(4) {
+            @apply pt-2 pl-2;
+        }
     }
 
     .item:last-child,
