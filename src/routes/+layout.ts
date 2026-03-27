@@ -1,4 +1,4 @@
-import { carregar } from "$lib/utils/google-planilha";
+import { carregarPlanilha } from "$lib/utils/google-planilha";
 import { resultBackup } from "$lib/utils/json-backup";
 import type { LayoutLoad } from "./$types";
 
@@ -10,7 +10,7 @@ export const load = (async ({ fetch }) => {
   let result: PlayerStat[];
 
   try {
-    result = await carregar(fetch);
+    result = await carregarPlanilha(fetch);
   } catch (error) {
     console.log("Erro ao carregar dados da planilha, usando backup:", error);
     result = resultBackup;

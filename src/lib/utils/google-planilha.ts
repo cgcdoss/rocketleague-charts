@@ -1,6 +1,6 @@
 import { PUBLIC_URL_PLANILHA } from "$env/static/public";
 
-export async function carregar(fetch: typeof window.fetch): Promise<PlayerStat[]> {
+export async function carregarPlanilha(fetch: typeof window.fetch): Promise<PlayerStat[]> {
   const url = PUBLIC_URL_PLANILHA;
 
   const res = await fetch(url);
