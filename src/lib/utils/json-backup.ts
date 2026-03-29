@@ -1,4 +1,4 @@
-export const resultBackup = [
+export const resultBackup: Array<PlayerStat> = [
   {
     Nome: 'Gabriel',
     'Total de Partidas Jogadas': 8393,
@@ -10,7 +10,6 @@ export const resultBackup = [
     'Média de Assistências por Partida': 0.52,
     'Média de Defesas por Partida': 1.3,
     'Nível de XP': 2315,
-    'XP geral': 13084,
     'Tempo de Jogo (em horas)': 645,
     'Vitórias': 5433,
     'MVPs': 2887,
@@ -31,7 +30,6 @@ export const resultBackup = [
     'Média de Assistências por Partida': 0.61,
     'Média de Defesas por Partida': 0.52,
     'Nível de XP': 1417,
-    'XP geral': 8804,
     'Tempo de Jogo (em horas)': 616,
     'Vitórias': 4603,
     'MVPs': 1632,
@@ -52,7 +50,6 @@ export const resultBackup = [
     'Média de Assistências por Partida': 0.61,
     'Média de Defesas por Partida': 0.86,
     'Nível de XP': 1990,
-    'XP geral': 16011,
     'Tempo de Jogo (em horas)': 490,
     'Vitórias': 3567,
     'MVPs': 1324,
@@ -73,7 +70,6 @@ export const resultBackup = [
     'Média de Assistências por Partida': 0.59,
     'Média de Defesas por Partida': 0.7,
     'Nível de XP': 1878,
-    'XP geral': 3720,
     'Tempo de Jogo (em horas)': 499,
     'Vitórias': 3541,
     'MVPs': 895,
@@ -84,4 +80,4 @@ export const resultBackup = [
     "Início do jogo": new Date("2021-01-01T00:00:00"),
 
   },
-] as Array<PlayerStat>;
+];
