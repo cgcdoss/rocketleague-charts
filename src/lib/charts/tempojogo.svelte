@@ -48,8 +48,11 @@
                     align: "top",
                     color: colors[1],
                     offset: 0,
-                    formatter: (value) =>
-                        `${value.toString().replace(".", ",")} anos`,
+                    formatter: (value) => {
+                        const anos = Math.floor(value);
+                        const meses = Math.round((value - anos) * 12);
+                        return `${anos}a ${meses}m`;
+                    },
                     font: {
                         weight: "bold",
                         size: 12,
