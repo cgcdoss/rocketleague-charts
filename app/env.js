@@ -1,1 +1,1 @@
-export const env={"PUBLIC_URL_PLANILHA":"https://docs.google.com/spreadsheets/d/1QzjAUms3K_2RWJ4q9yZXN73gwU3dHJaf5jst_wUIn8U/gviz/tq?tqx=out:json&gid=0"}
+export const env={"PUBLIC_URL_PLANILHA_0":"https://docs.google.com/spreadsheets/d/1QzjAUms3K_2RWJ4q9yZXN73gwU3dHJaf5jst_wUIn8U/gviz/tq?tqx=out:json&gid=0","PUBLIC_URL_PLANILHA_1":"https://docs.google.com/spreadsheets/d/1QzjAUms3K_2RWJ4q9yZXN73gwU3dHJaf5jst_wUIn8U/gviz/tq?tqx=out:json&gid=1936192"}
